@@ -6,19 +6,43 @@
 \usepackage[none]{hyphenat}
 \usepackage{alltt}
 \usepackage{graphicx}
+\usepackage{transparent}
+\usepackage{eso-pic}
 
-\title{
-Seis Canciónes de María Elena Walsh\\
-Six Songs of María Elena Walsh
-}
+\newcommand\BackgroundPic{%
+  \put(0,0){%
+    \parbox[b][\paperheight]{\paperwidth}{%
+      %% \vfill
+      \centering
+      {\transparent{0.3}\includegraphics[width=\paperwidth,height=\paperheight,%
+        keepaspectratio,page=2,clip = true, trim = 2cm 4cm 0in 0in]{20150406235752619.pdf}}%
+      \vfill
+            {\transparent{0.3}\includegraphics[width=\paperwidth,height=\paperheight,%
+        keepaspectratio,page=1,clip = true, trim = 2cm 4cm 0in 0in]{20150406235752619.pdf}}%
+      }}}
 
 \date{April 10, 2015}
 
 \begin{document}
 
-\maketitle
+\AddToShipoutPicture*{\BackgroundPic}
+
+\phantom{a}
+%% \maketitle
+\vspace*{\fill}
+{\LARGE\textbf{
+  \begin{center}
+Seis canciones de María Elena Walsh\\
+Six Songs of María Elena Walsh
+\end{center}
+}}
+\vspace*{\fill}
+
+\pagestyle{empty}
 
 \clearpage
+
+\setcounter{page}{1}
 
 \begin{center}
 \large
@@ -40,7 +64,8 @@ $$
 \begin{alltt}\normalfont
 They told me that in the Kingdom of Reverse
 The bird swims and the fish flies,
-That the cats don’t say “miau” and that they say “yes,”
+That the cats don’t say “miau” and that
+they say “yes,”
 Because they study a lot of English!
 \end{alltt}
 }
@@ -67,8 +92,8 @@ We’ll see how it is, the Kingdom of Reverse!
 \colchunk
 {
 \begin{alltt}\normalfont
-  Vamos a ver cómo es, el Reino del Revés\\
-  Vamos a ver cómo es, el Reino del Revés.
+Vamos a ver cómo es, el Reino del Revés\\
+Vamos a ver cómo es, el Reino del Revés.
 \end{alltt}
 }
 
@@ -79,7 +104,8 @@ We’ll see how it is, the Kingdom of Reverse!
 \begin{alltt}\normalfont
 They told me that in the Kingdom of Reverse
 Nobody dances upon their feet,
-That one thief is a policeman and another is a judge,
+That one thief is a policeman and another is
+a judge,
 And that two and two make three!
 \end{alltt}
 }
